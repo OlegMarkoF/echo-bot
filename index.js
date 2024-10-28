@@ -1,7 +1,9 @@
 // const { Telegraf } = require('telegraf');
 const TelegramBot = require("node-telegram-bot-api");
+require('dotenv').config()
+const token = process.env.TOKEN;
 
-const bot = new TelegramBot("7696342801:AAE_R8qgyoWHDU3x1cPZITAqO0anVYei5nE", {
+const bot = new TelegramBot(token, {
   polling: {
     interval: 300,
     autoStart: true,
